@@ -70,9 +70,12 @@ func (r ResponseHeaderNewParams) URLQuery() (v url.Values, err error) {
 }
 
 type ResponseHeaderGetParams struct {
-	AdditionalProperties param.Opt[string] `query:"additionalProperties,omitzero" json:"-"`
-	Description          param.Opt[string] `query:"description,omitzero" json:"-"`
-	Type                 param.Opt[string] `query:"type,omitzero" json:"-"`
+	// Enable additional properties
+	AdditionalProperties param.Opt[bool] `query:"additionalProperties,omitzero" json:"-"`
+	// Freeform query string parameters to be added as response headers
+	Description param.Opt[string] `query:"description,omitzero" json:"-"`
+	// Type parameter for response headers
+	Type param.Opt[string] `query:"type,omitzero" json:"-"`
 	paramObj
 }
 

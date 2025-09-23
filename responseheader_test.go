@@ -54,7 +54,7 @@ func TestResponseHeaderGetWithOptionalParams(t *testing.T) {
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.ResponseHeaders.Get(context.TODO(), mockhttp.ResponseHeaderGetParams{
-		AdditionalProperties: mockhttp.String("additionalProperties"),
+		AdditionalProperties: mockhttp.Bool(true),
 		Description:          mockhttp.String("description"),
 		Type:                 mockhttp.String("type"),
 	})
