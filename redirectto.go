@@ -56,7 +56,7 @@ func (r *RedirectToService) Update(ctx context.Context, body RedirectToUpdatePar
 	opts = slices.Concat(r.Options, opts)
 	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
 	path := "redirect-to"
-	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPatch, path, body, nil, opts...)
+	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPut, path, body, nil, opts...)
 	return
 }
 
@@ -66,6 +66,15 @@ func (r *RedirectToService) Delete(ctx context.Context, body RedirectToDeletePar
 	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
 	path := "redirect-to"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodDelete, path, body, nil, opts...)
+	return
+}
+
+// Redirects the request to the target URL
+func (r *RedirectToService) Modify(ctx context.Context, body RedirectToModifyParams, opts ...option.RequestOption) (err error) {
+	opts = slices.Concat(r.Options, opts)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	path := "redirect-to"
+	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPatch, path, body, nil, opts...)
 	return
 }
 
@@ -127,6 +136,22 @@ type RedirectToDeleteParams struct {
 
 // URLQuery serializes [RedirectToDeleteParams]'s query parameters as `url.Values`.
 func (r RedirectToDeleteParams) URLQuery() (v url.Values, err error) {
+	return apiquery.MarshalWithSettings(r, apiquery.QuerySettings{
+		ArrayFormat:  apiquery.ArrayQueryFormatComma,
+		NestedFormat: apiquery.NestedQueryFormatBrackets,
+	})
+}
+
+type RedirectToModifyParams struct {
+	// The URL to redirect to
+	URL string `query:"url,required" format:"uri" json:"-"`
+	// The HTTP status code to use for redirection
+	StatusCode param.Opt[string] `query:"status_code,omitzero" json:"-"`
+	paramObj
+}
+
+// URLQuery serializes [RedirectToModifyParams]'s query parameters as `url.Values`.
+func (r RedirectToModifyParams) URLQuery() (v url.Values, err error) {
 	return apiquery.MarshalWithSettings(r, apiquery.QuerySettings{
 		ArrayFormat:  apiquery.ArrayQueryFormatComma,
 		NestedFormat: apiquery.NestedQueryFormatBrackets,
