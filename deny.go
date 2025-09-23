@@ -53,7 +53,7 @@ func (r *DenyService) Update(ctx context.Context, opts ...option.RequestOption) 
 	opts = slices.Concat(r.Options, opts)
 	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
 	path := "deny"
-	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPatch, path, nil, nil, opts...)
+	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPut, path, nil, nil, opts...)
 	return
 }
 
@@ -63,5 +63,14 @@ func (r *DenyService) Delete(ctx context.Context, opts ...option.RequestOption) 
 	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
 	path := "deny"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodDelete, path, nil, nil, opts...)
+	return
+}
+
+// Returns page denied by robots.txt rules
+func (r *DenyService) Modify(ctx context.Context, opts ...option.RequestOption) (err error) {
+	opts = slices.Concat(r.Options, opts)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	path := "deny"
+	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPatch, path, nil, nil, opts...)
 	return
 }
