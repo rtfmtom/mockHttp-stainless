@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"net/http/httputil"
 
-	"github.com/stainless-sdks/mockhttp-go/internal/apijson"
-	"github.com/stainless-sdks/mockhttp-go/packages/respjson"
+	"github.com/rtfmtom/mockHttp-stainless/internal/apijson"
+	"github.com/rtfmtom/mockHttp-stainless/packages/respjson"
 )
 
 // Error represents an error that originates from the API, i.e. when a request is

@@ -1,7 +1,7 @@
 package apijson
 
 import (
-	"github.com/stainless-sdks/mockhttp-go/packages/respjson"
+	"github.com/rtfmtom/mockHttp-stainless/packages/respjson"
 	"reflect"
 )
 

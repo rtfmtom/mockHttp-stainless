@@ -41,7 +41,7 @@ To use a local version of this library from source in another project, edit the 
 directive. This can be done through the CLI with the following:
 
 ```sh
-$ go mod edit -replace github.com/stainless-sdks/mockhttp-go=/path/to/mockhttp-go
+$ go mod edit -replace github.com/rtfmtom/mockHttp-stainless=/path/to/mockHttp-stainless
 ```
 
 ## Running tests

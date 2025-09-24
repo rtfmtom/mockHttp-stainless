@@ -1,7 +1,7 @@
 package sentinel
 
 import (
-	"github.com/stainless-sdks/mockhttp-go/internal/encoding/json/shims"
+	"github.com/rtfmtom/mockHttp-stainless/internal/encoding/json/shims"
 	"reflect"
 	"sync"
 )

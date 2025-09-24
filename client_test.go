@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/mockhttp-go"
-	"github.com/stainless-sdks/mockhttp-go/internal"
-	"github.com/stainless-sdks/mockhttp-go/option"
+	"github.com/rtfmtom/mockHttp-stainless"
+	"github.com/rtfmtom/mockHttp-stainless/internal"
+	"github.com/rtfmtom/mockHttp-stainless/option"
 )
 
 type closureTransport struct {
