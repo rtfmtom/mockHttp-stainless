@@ -14,7 +14,7 @@ import (
 	"encoding"
 	"encoding/base64"
 	"fmt"
-	"github.com/stainless-sdks/mockhttp-go/internal/encoding/json/shims"
+	"github.com/rtfmtom/mockHttp-stainless/internal/encoding/json/shims"
 	"reflect"
 	"strconv"
 	"strings"

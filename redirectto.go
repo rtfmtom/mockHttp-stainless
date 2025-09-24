@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"slices"
 
-	"github.com/stainless-sdks/mockhttp-go/internal/apiquery"
-	"github.com/stainless-sdks/mockhttp-go/internal/requestconfig"
-	"github.com/stainless-sdks/mockhttp-go/option"
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/internal/apiquery"
+	"github.com/rtfmtom/mockHttp-stainless/internal/requestconfig"
+	"github.com/rtfmtom/mockHttp-stainless/option"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
 )
 
 // RedirectToService contains methods and other services that help with interacting

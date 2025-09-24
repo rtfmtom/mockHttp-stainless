@@ -1,8 +1,8 @@
 package sentinel_test
 
 import (
-	"github.com/stainless-sdks/mockhttp-go/internal/encoding/json/sentinel"
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/internal/encoding/json/sentinel"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
 	"reflect"
 	"slices"
 	"testing"

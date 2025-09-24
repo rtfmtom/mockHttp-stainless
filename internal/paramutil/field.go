@@ -1,8 +1,8 @@
 package paramutil
 
 import (
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
-	"github.com/stainless-sdks/mockhttp-go/packages/respjson"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/packages/respjson"
 )
 
 func AddrIfPresent[T comparable](v param.Opt[T]) *T {

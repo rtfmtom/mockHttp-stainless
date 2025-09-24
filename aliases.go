@@ -3,8 +3,8 @@
 package mockhttp
 
 import (
-	"github.com/stainless-sdks/mockhttp-go/internal/apierror"
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/internal/apierror"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
 )
 
 // aliased to make [param.APIUnion] private when embedding

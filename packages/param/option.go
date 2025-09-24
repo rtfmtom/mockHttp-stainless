@@ -3,7 +3,7 @@ package param
 import (
 	"encoding/json"
 	"fmt"
-	shimjson "github.com/stainless-sdks/mockhttp-go/internal/encoding/json"
+	shimjson "github.com/rtfmtom/mockHttp-stainless/internal/encoding/json"
 	"time"
 )
 

@@ -2,7 +2,7 @@ package param
 
 import (
 	"encoding/json"
-	"github.com/stainless-sdks/mockhttp-go/internal/encoding/json/sentinel"
+	"github.com/rtfmtom/mockHttp-stainless/internal/encoding/json/sentinel"
 	"reflect"
 )
 
