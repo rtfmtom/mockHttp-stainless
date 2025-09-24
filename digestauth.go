@@ -78,6 +78,35 @@ func (r *DigestAuthService) GetWithAlgorithm(ctx context.Context, algorithm stri
 	return
 }
 
+// HTTP Digest authentication. Mirrors httpbin behavior for testing clients.
+func (r *DigestAuthService) GetWithAlgorithmStaleAfter(ctx context.Context, staleAfter string, query DigestAuthGetWithAlgorithmStaleAfterParams, opts ...option.RequestOption) (err error) {
+	opts = slices.Concat(r.Options, opts)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	if query.Qop == "" {
+		err = errors.New("missing required qop parameter")
+		return
+	}
+	if query.User == "" {
+		err = errors.New("missing required user parameter")
+		return
+	}
+	if query.Passwd == "" {
+		err = errors.New("missing required passwd parameter")
+		return
+	}
+	if query.Algorithm == "" {
+		err = errors.New("missing required algorithm parameter")
+		return
+	}
+	if staleAfter == "" {
+		err = errors.New("missing required stale_after parameter")
+		return
+	}
+	path := fmt.Sprintf("digest-auth/%s/%s/%s/%s/%s", query.Qop, query.User, query.Passwd, query.Algorithm, staleAfter)
+	err = requestconfig.ExecuteNewRequest(ctx, http.MethodGet, path, nil, nil, opts...)
+	return
+}
+
 type DigestAuthGetParams struct {
 	Qop  string `path:"qop,required" json:"-"`
 	User string `path:"user,required" json:"-"`
@@ -88,5 +117,13 @@ type DigestAuthGetWithAlgorithmParams struct {
 	Qop    string `path:"qop,required" json:"-"`
 	User   string `path:"user,required" json:"-"`
 	Passwd string `path:"passwd,required" json:"-"`
+	paramObj
+}
+
+type DigestAuthGetWithAlgorithmStaleAfterParams struct {
+	Qop       string `path:"qop,required" json:"-"`
+	User      string `path:"user,required" json:"-"`
+	Passwd    string `path:"passwd,required" json:"-"`
+	Algorithm string `path:"algorithm,required" json:"-"`
 	paramObj
 }

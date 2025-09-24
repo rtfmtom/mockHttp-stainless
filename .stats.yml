@@ -1,4 +1,4 @@
-configured_endpoints: 82
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/huntington-bank%2Fmockhttp-ab184c622af4a76ee875e77f9d14a1f248beb17f6abf6ec51100fe3bed647607.yml
-openapi_spec_hash: 6ec30a752cb770ba8524e2fc954b5691
-config_hash: e699b215de0a47f512bbd341d37045a7
+configured_endpoints: 83
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/huntington-bank%2Fmockhttp-d5984035b55c6ad8c0ca5fef0ee3319b0928513c3cd7016f5ccefe3cc5ba7dd0.yml
+openapi_spec_hash: 238860272bcdf61a926faa93baee60f3
+config_hash: 7ae1131c3d365c81bba08163551342a4
