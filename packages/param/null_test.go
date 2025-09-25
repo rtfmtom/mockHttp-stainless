@@ -2,7 +2,7 @@ package param_test
 
 import (
 	"encoding/json"
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
 	"testing"
 )
 

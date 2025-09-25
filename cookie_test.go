@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/mockhttp-go"
-	"github.com/stainless-sdks/mockhttp-go/internal/testutil"
-	"github.com/stainless-sdks/mockhttp-go/option"
+	"github.com/rtfmtom/mockHttp-stainless"
+	"github.com/rtfmtom/mockHttp-stainless/internal/testutil"
+	"github.com/rtfmtom/mockHttp-stainless/option"
 )
 
 func TestCookieNewWithOptionalParams(t *testing.T) {

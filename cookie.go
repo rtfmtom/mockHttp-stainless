@@ -9,12 +9,12 @@ import (
 	"slices"
 	"time"
 
-	"github.com/stainless-sdks/mockhttp-go/internal/apijson"
-	"github.com/stainless-sdks/mockhttp-go/internal/apiquery"
-	"github.com/stainless-sdks/mockhttp-go/internal/requestconfig"
-	"github.com/stainless-sdks/mockhttp-go/option"
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
-	"github.com/stainless-sdks/mockhttp-go/packages/respjson"
+	"github.com/rtfmtom/mockHttp-stainless/internal/apijson"
+	"github.com/rtfmtom/mockHttp-stainless/internal/apiquery"
+	"github.com/rtfmtom/mockHttp-stainless/internal/requestconfig"
+	"github.com/rtfmtom/mockHttp-stainless/option"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/packages/respjson"
 )
 
 // CookieService contains methods and other services that help with interacting

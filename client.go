@@ -8,8 +8,8 @@ import (
 	"os"
 	"slices"
 
-	"github.com/stainless-sdks/mockhttp-go/internal/requestconfig"
-	"github.com/stainless-sdks/mockhttp-go/option"
+	"github.com/rtfmtom/mockHttp-stainless/internal/requestconfig"
+	"github.com/rtfmtom/mockHttp-stainless/option"
 )
 
 // Client creates a struct with services and top level methods that help with
@@ -141,33 +141,33 @@ func (r *Client) Execute(ctx context.Context, method string, path string, params
 
 // Get makes a GET request with the given URL, params, and optionally deserializes
 // to a response. See [Execute] documentation on the params and response.
-func (r *Client) Get(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
+func (r *Client) GetRequest(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
 	return r.Execute(ctx, http.MethodGet, path, params, res, opts...)
 }
 
 // Post makes a POST request with the given URL, params, and optionally
 // deserializes to a response. See [Execute] documentation on the params and
 // response.
-func (r *Client) Post(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
+func (r *Client) PostRequest(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
 	return r.Execute(ctx, http.MethodPost, path, params, res, opts...)
 }
 
 // Put makes a PUT request with the given URL, params, and optionally deserializes
 // to a response. See [Execute] documentation on the params and response.
-func (r *Client) Put(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
+func (r *Client) PutRequest(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
 	return r.Execute(ctx, http.MethodPut, path, params, res, opts...)
 }
 
 // Patch makes a PATCH request with the given URL, params, and optionally
 // deserializes to a response. See [Execute] documentation on the params and
 // response.
-func (r *Client) Patch(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
+func (r *Client) PatchRequest(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
 	return r.Execute(ctx, http.MethodPatch, path, params, res, opts...)
 }
 
 // Delete makes a DELETE request with the given URL, params, and optionally
 // deserializes to a response. See [Execute] documentation on the params and
 // response.
-func (r *Client) Delete(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
+func (r *Client) DeleteRequest(ctx context.Context, path string, params any, res any, opts ...option.RequestOption) error {
 	return r.Execute(ctx, http.MethodDelete, path, params, res, opts...)
 }

@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/mockhttp-go
+module github.com/rtfmtom/mockHttp-stainless
 
 go 1.22
 

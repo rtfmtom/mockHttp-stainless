@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"slices"
 
-	"github.com/stainless-sdks/mockhttp-go/internal/requestconfig"
-	"github.com/stainless-sdks/mockhttp-go/option"
+	"github.com/rtfmtom/mockHttp-stainless/internal/requestconfig"
+	"github.com/rtfmtom/mockHttp-stainless/option"
 )
 
 // GzipService contains methods and other services that help with interacting with

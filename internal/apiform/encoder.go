@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
 )
 
 var encoders sync.Map // map[encoderEntry]encoderFunc

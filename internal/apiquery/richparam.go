@@ -1,7 +1,7 @@
 package apiquery
 
 import (
-	"github.com/stainless-sdks/mockhttp-go/packages/param"
+	"github.com/rtfmtom/mockHttp-stainless/packages/param"
 	"reflect"
 )
 

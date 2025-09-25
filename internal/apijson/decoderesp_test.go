@@ -2,8 +2,8 @@ package apijson_test
 
 import (
 	"encoding/json"
-	"github.com/stainless-sdks/mockhttp-go/internal/apijson"
-	"github.com/stainless-sdks/mockhttp-go/packages/respjson"
+	"github.com/rtfmtom/mockHttp-stainless/internal/apijson"
+	"github.com/rtfmtom/mockHttp-stainless/packages/respjson"
 	"testing"
 )
 

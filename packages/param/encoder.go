@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"time"
 
-	shimjson "github.com/stainless-sdks/mockhttp-go/internal/encoding/json"
+	shimjson "github.com/rtfmtom/mockHttp-stainless/internal/encoding/json"
 
 	"github.com/tidwall/sjson"
 )
