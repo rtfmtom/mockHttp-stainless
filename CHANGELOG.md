@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.3 (2025-09-26)
+
+Full Changelog: [v0.0.2...v0.0.3](https://github.com/rtfmtom/mockHttp-stainless/compare/v0.0.2...v0.0.3)
+
+### Bug Fixes
+
+* bugfix for setting JSON keys with special characters ([6c290d6](https://github.com/rtfmtom/mockHttp-stainless/commit/6c290d60452b4dbb813e64f6d114e9f8e92c0fdd))
+
 ## 0.0.2 (2025-09-24)
 
 Full Changelog: [v0.0.1...v0.0.2](https://github.com/rtfmtom/mockHttp-stainless/compare/v0.0.1...v0.0.2)
