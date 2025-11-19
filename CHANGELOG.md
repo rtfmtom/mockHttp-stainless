@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.0.4 (2025-11-19)
+
+Full Changelog: [v0.0.3...v0.0.4](https://github.com/rtfmtom/mockHttp-stainless/compare/v0.0.3...v0.0.4)
+
+### Bug Fixes
+
+* **client:** correctly specify Accept header with */* instead of empty ([3094d6e](https://github.com/rtfmtom/mockHttp-stainless/commit/3094d6ee2cd6299b2ac581c824dd64849b0ffb95))
+
+
+### Chores
+
+* bump gjson version ([dc0e6c7](https://github.com/rtfmtom/mockHttp-stainless/commit/dc0e6c78dca0a2b4ce6f80159755ed3ad5e443c9))
+* **internal:** grammar fix (it's -&gt; its) ([8770098](https://github.com/rtfmtom/mockHttp-stainless/commit/8770098743b8f47473caa1a5c41fb3314b2cf9de))
+
 ## 0.0.3 (2025-09-26)
 
 Full Changelog: [v0.0.2...v0.0.3](https://github.com/rtfmtom/mockHttp-stainless/compare/v0.0.2...v0.0.3)
