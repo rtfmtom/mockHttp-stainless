@@ -33,7 +33,7 @@ func NewDenyService(opts ...option.RequestOption) (r DenyService) {
 // Returns page denied by robots.txt rules
 func (r *DenyService) New(ctx context.Context, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "deny"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPost, path, nil, nil, opts...)
 	return
@@ -42,7 +42,7 @@ func (r *DenyService) New(ctx context.Context, opts ...option.RequestOption) (er
 // Returns page denied by robots.txt rules
 func (r *DenyService) Get(ctx context.Context, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "deny"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodGet, path, nil, nil, opts...)
 	return
@@ -51,7 +51,7 @@ func (r *DenyService) Get(ctx context.Context, opts ...option.RequestOption) (er
 // Returns page denied by robots.txt rules
 func (r *DenyService) Update(ctx context.Context, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "deny"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPut, path, nil, nil, opts...)
 	return
@@ -60,7 +60,7 @@ func (r *DenyService) Update(ctx context.Context, opts ...option.RequestOption) 
 // Returns page denied by robots.txt rules
 func (r *DenyService) Delete(ctx context.Context, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "deny"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodDelete, path, nil, nil, opts...)
 	return
@@ -69,7 +69,7 @@ func (r *DenyService) Delete(ctx context.Context, opts ...option.RequestOption) 
 // Returns page denied by robots.txt rules
 func (r *DenyService) Modify(ctx context.Context, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "deny"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPatch, path, nil, nil, opts...)
 	return

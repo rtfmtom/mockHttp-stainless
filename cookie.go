@@ -55,7 +55,7 @@ func (r *CookieService) List(ctx context.Context, opts ...option.RequestOption) 
 // Delete a cookie
 func (r *CookieService) Delete(ctx context.Context, body CookieDeleteParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "cookies"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodDelete, path, body, nil, opts...)
 	return

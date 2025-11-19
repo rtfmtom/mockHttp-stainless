@@ -38,7 +38,7 @@ func (r *RelativeRedirectService) Get(ctx context.Context, value int64, query Re
 		opts = append(opts, option.WithHeader("host", fmt.Sprintf("%s", query.Host)))
 	}
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := fmt.Sprintf("relative-redirect/%v", value)
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodGet, path, nil, nil, opts...)
 	return

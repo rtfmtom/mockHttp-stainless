@@ -35,7 +35,7 @@ func NewDigestAuthService(opts ...option.RequestOption) (r DigestAuthService) {
 // HTTP Digest authentication. Mirrors httpbin behavior for testing clients.
 func (r *DigestAuthService) Get(ctx context.Context, passwd string, query DigestAuthGetParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	if query.Qop == "" {
 		err = errors.New("missing required qop parameter")
 		return
@@ -56,7 +56,7 @@ func (r *DigestAuthService) Get(ctx context.Context, passwd string, query Digest
 // HTTP Digest authentication. Mirrors httpbin behavior for testing clients.
 func (r *DigestAuthService) GetWithAlgorithm(ctx context.Context, algorithm string, query DigestAuthGetWithAlgorithmParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	if query.Qop == "" {
 		err = errors.New("missing required qop parameter")
 		return
@@ -81,7 +81,7 @@ func (r *DigestAuthService) GetWithAlgorithm(ctx context.Context, algorithm stri
 // HTTP Digest authentication. Mirrors httpbin behavior for testing clients.
 func (r *DigestAuthService) GetWithAlgorithmStaleAfter(ctx context.Context, staleAfter string, query DigestAuthGetWithAlgorithmStaleAfterParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	if query.Qop == "" {
 		err = errors.New("missing required qop parameter")
 		return
