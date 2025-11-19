@@ -36,7 +36,7 @@ func NewRedirectToService(opts ...option.RequestOption) (r RedirectToService) {
 // Redirects the request to the target URL
 func (r *RedirectToService) New(ctx context.Context, body RedirectToNewParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "redirect-to"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPost, path, body, nil, opts...)
 	return
@@ -45,7 +45,7 @@ func (r *RedirectToService) New(ctx context.Context, body RedirectToNewParams, o
 // Redirects the request to the target URL
 func (r *RedirectToService) Get(ctx context.Context, query RedirectToGetParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "redirect-to"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodGet, path, query, nil, opts...)
 	return
@@ -54,7 +54,7 @@ func (r *RedirectToService) Get(ctx context.Context, query RedirectToGetParams, 
 // Redirects the request to the target URL
 func (r *RedirectToService) Update(ctx context.Context, body RedirectToUpdateParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "redirect-to"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPut, path, body, nil, opts...)
 	return
@@ -63,7 +63,7 @@ func (r *RedirectToService) Update(ctx context.Context, body RedirectToUpdatePar
 // Redirects the request to the target URL
 func (r *RedirectToService) Delete(ctx context.Context, body RedirectToDeleteParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "redirect-to"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodDelete, path, body, nil, opts...)
 	return
@@ -72,7 +72,7 @@ func (r *RedirectToService) Delete(ctx context.Context, body RedirectToDeletePar
 // Redirects the request to the target URL
 func (r *RedirectToService) Modify(ctx context.Context, body RedirectToModifyParams, opts ...option.RequestOption) (err error) {
 	opts = slices.Concat(r.Options, opts)
-	opts = append([]option.RequestOption{option.WithHeader("Accept", "")}, opts...)
+	opts = append([]option.RequestOption{option.WithHeader("Accept", "*/*")}, opts...)
 	path := "redirect-to"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPatch, path, body, nil, opts...)
 	return
